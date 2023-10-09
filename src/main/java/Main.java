@@ -1,5 +1,3 @@
-package kata;
-
 public class Main {
     public static String formatText(String text) {
         StringBuffer result = new StringBuffer();
