@@ -10,7 +10,7 @@ public class Step2Test {
         String aRandomString = "a random string";
 
         // When
-        String aFormattedText = Main.formatText(aRandomString);
+        String aFormattedText = Main.f(aRandomString);
 
         // Then
         assertEquals("I don't know what I'm doing", aFormattedText);
@@ -22,7 +22,7 @@ public class Step2Test {
         String aRandomString = "a random string containing < and something else";
 
         // When
-        String aFormattedText = Main.formatText(aRandomString);
+        String aFormattedText = Main.f(aRandomString);
 
         // Then
         assertEquals("I don't know what I'm doing", aFormattedText);
