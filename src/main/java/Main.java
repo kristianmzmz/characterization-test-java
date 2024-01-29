@@ -1,19 +1,19 @@
 public class Main {
-    public static String f(String t) {
-        StringBuffer o = new StringBuffer();
-        for (int n = 0; n < t.length(); ++n) {
-            int c = t.charAt(n);
-            if (c == '<') {
-                while (n < t.length() && t.charAt(n) != '/' && t.charAt(n) != '>')
-                    n++;
-                if (n < t.length() && t.charAt(n) == '/')
-                    n += 4;
+    public static String stringTransformer(String inputString) {
+        StringBuffer outputString = new StringBuffer();
+        for (int currentrPosition = 0; currentrPosition < inputString.length(); ++currentrPosition) {
+            int currentCharacter = inputString.charAt(currentrPosition);
+            if (currentCharacter == '<') {
+                while (currentrPosition < inputString.length() && inputString.charAt(currentrPosition) != '/' && inputString.charAt(currentrPosition) != '>')
+                    currentrPosition++;
+                if (currentrPosition < inputString.length() && inputString.charAt(currentrPosition) == '/')
+                    currentrPosition += 4;
                 else
-                    n++;
+                    currentrPosition++;
             }
-            if (n < t.length())
-                o.append(t.charAt(n));
+            if (currentrPosition < inputString.length())
+                outputString.append(inputString.charAt(currentrPosition));
         }
-        return new String(o);
+        return new String(outputString);
     }
 }

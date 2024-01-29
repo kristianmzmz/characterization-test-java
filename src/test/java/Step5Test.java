@@ -10,7 +10,7 @@ public class Step5Test {
         String aRandomString = "a random string";
 
         // When
-        String aFormattedText = Main.f(aRandomString);
+        String aFormattedText = Main.stringTransformer(aRandomString);
 
         // Then
         assertEquals("I don't know what I'm doing", aFormattedText);
@@ -22,7 +22,7 @@ public class Step5Test {
         String aRandomString = "a random string containing < and something else";
 
         // When
-        String aFormattedText = Main.f(aRandomString);
+        String aFormattedText = Main.stringTransformer(aRandomString);
 
         // Then
         assertEquals("I don't know what I'm doing", aFormattedText);
@@ -34,7 +34,7 @@ public class Step5Test {
         String aRandomString = "Cómo mola esto de los tests ";
 
         // When
-        String aFormattedText = Main.f(aRandomString);
+        String aFormattedText = Main.stringTransformer(aRandomString);
 
         // Then
         assertEquals(aRandomString, aFormattedText);
@@ -46,7 +46,7 @@ public class Step5Test {
         String aRandomString = "En este texto llegaremos hasta el símbolo < y no más";
 
         // When
-        String aFormattedText = Main.f(aRandomString);
+        String aFormattedText = Main.stringTransformer(aRandomString);
 
         // Then
         assertEquals("En este texto llegaremos hasta el símbolo ", aFormattedText);
@@ -59,7 +59,7 @@ public class Step5Test {
         String aRandomString = "En este texto llegaremos hasta el símbolo < y lo que hay en medio/ pero no el resto";
 
         // When
-        String aFormattedText = Main.f(aRandomString);
+        String aFormattedText = Main.stringTransformer(aRandomString);
 
         // Then
         assertEquals("En este texto llegaremos hasta el símbolo pero no el resto", aFormattedText);

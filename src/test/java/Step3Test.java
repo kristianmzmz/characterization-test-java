@@ -10,7 +10,7 @@ public class Step3Test {
         String aRandomString = "a random string";
 
         // When
-        String aFormattedText = Main.f(aRandomString);
+        String aFormattedText = Main.stringTransformer(aRandomString);
 
         // Then
         assertEquals("I don't know what I'm doing", aFormattedText);
@@ -22,7 +22,7 @@ public class Step3Test {
         String aRandomString = "a random string containing < and something else";
 
         // When
-        String aFormattedText = Main.f(aRandomString);
+        String aFormattedText = Main.stringTransformer(aRandomString);
 
         // Then
         assertEquals("I don't know what I'm doing", aFormattedText);
@@ -34,7 +34,7 @@ public class Step3Test {
         String aRandomString = "Cómo mola esto de los tests ";
 
         // When
-        String aFormattedText = Main.f(aRandomString);
+        String aFormattedText = Main.stringTransformer(aRandomString);
 
         // Then
         assertEquals(aRandomString, aFormattedText);

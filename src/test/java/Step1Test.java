@@ -10,7 +10,7 @@ public class Step1Test {
         String aRandomString = "a random string";
 
         // When
-        String aFormattedText = Main.f(aRandomString);
+        String aFormattedText = Main.stringTransformer(aRandomString);
 
         // Then
         assertEquals("I don't know what I'm doing", aFormattedText);
